@@ -125,11 +125,13 @@ function getEtherscanApiKeys() {
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
-    solidity: '0.8.19',
-    settings: {
-        optimizer: {
-            enabled: true,
-            runs: 200,
+    solidity: {
+        version: '0.8.19',
+        settings: {
+            optimizer: {
+                enabled: true,
+                runs: 200,
+            },
         },
     },
 

@@ -7,8 +7,8 @@ async function main() {
   if (network.name === 'hardhat') {
     console.warn(
       "You are trying to deploy a contract to the Hardhat Network, which" +
-        "gets automatically created and destroyed every time. Use the Hardhat" +
-        " option '--network localhost'"
+      "gets automatically created and destroyed every time. Use the Hardhat" +
+      " option '--network localhost'"
     );
   };
 
@@ -20,7 +20,7 @@ async function main() {
   const tokenName = 'Token';
   const token = await ethers.deployContract(tokenName);
   const tokenAddress = await token.getAddress();
-  deployed[tokenName] = tokenAddress
+  deployed[tokenName] = tokenAddress;
   console.log(`${tokenName} address: ${tokenAddress}`);
 
   // We also save the contract's artifacts and address in the frontend directory
